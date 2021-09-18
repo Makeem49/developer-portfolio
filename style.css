@@ -1,0 +1,390 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    font-family:'roboto';
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    padding: 0px 5px;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Navbar start here */
+.my-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 0px 40px ;
+}
+
+
+
+li {
+    display: inline-block;
+    min-width: 50px;
+    padding: 5px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+li.active {
+    background-color: #3581C6;
+    border-radius: 10px;
+}
+
+#logo h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family:'roboto';
+    letter-spacing: 0.3rem;
+}
+
+.icons {
+    font-size: 1.7rem;
+    position: relative;
+    z-index: 4;
+}
+
+#side-bar {
+    position: absolute;
+    height:50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 20px;
+    transform: translateY(-100%);
+    text-align: center;
+    transition: transform 1000ms;
+    opacity: 1;
+    background-color: white;
+    z-index: 2;
+}
+
+.bar {
+    transition: transform 1000ms;
+    transform: rotate(0deg);
+}
+
+
+
+#side-bar.show {
+    transform: translate(0px);
+}
+
+ul li{
+    display: block;
+    margin-top: 30px;
+    width: 95%;
+    overflow: hidden;
+    margin-right: 2px;
+    text-align: center;
+}
+/* Navbar ends here */
+
+
+
+/* Home start here */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: contain;
+    height: 100vh;
+    background:linear-gradient(to right, rgba(79, 151, 214, 0.8), rgba(0,98,185,0.8)),url('https://dopefolio.netlify.app/assets/svg/common-bg.svg');
+}
+
+.overlay {
+    opacity: 0.2;
+    z-index: -1;
+    
+}
+
+.content {
+    width: 1000px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.content h1{
+    font-size: 2.5rem;
+}
+
+.content p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+}
+
+.accounts {
+    margin-top: 20px;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.accounts i {
+    display: inline-block;
+    margin: 0.3em;
+}
+
+.resume i {
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+/* Home end here */
+
+
+/* About start */
+.about {
+    position: relative;
+    background-color: white;
+    /* height: 100vh; */
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    margin-bottom: 1.9em;
+}
+
+.about-content h2, .education h2, .project h2 {
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.about-content h2::after {
+    background-color: rgb(94, 94, 237);
+    content: '';
+    width: 40px;
+    height: 2.5px;
+    position: absolute;
+    top: 9rem;
+    transform: translateX(-120px);
+    border-radius: 30px;
+}
+
+.about-content p {
+    max-width: 1000px;
+    margin: 0px auto;
+    margin-top: 50px;
+    min-height: 50px;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+    line-height: 2.0rem;
+    word-spacing: 0.5px;
+}
+
+/* About end */
+
+
+/* education start here */
+.education {
+    background-color: rgba(211, 211, 211, 0.316);
+    padding-top: 50px;
+    min-height: 50vmin;
+    margin-bottom: 30px;
+}
+
+.education-type {
+    padding: 1em;
+    max-width: 1200px;
+    min-width: 100px;
+    min-height: 200px;
+    margin: 0 auto;
+    border: 1px solid rgba(230, 225, 225, 0.844);
+    box-shadow: 3px 3px 20px white;
+    
+}
+
+.education h2 {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.education h3 {
+    padding: 1.2rem;
+    padding-bottom: 0.7rem;
+    display: inline-block;
+}
+
+.education p {
+    padding-left: 1.8rem;
+}
+
+.education-type h5 {
+    float: right;
+    padding: 1.5rem;
+}
+
+.computer-course {
+    padding-top: 2.3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+/* education ends here */
+
+/* Projects start here */
+.project {
+    position: relative;
+    background-color: grey;
+    height: 100vh;
+    width: inherit;
+}
+
+.project .education-type{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Projects ends here */
+
+.contact {
+    position: relative;
+    background-color: grey;
+    height: 100vh;
+    width: inherit;
+}
+
+.footer {
+    width: 100%;
+    height: 150px;
+}
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /* Navbar start here */
+    .my-navbar{
+        justify-content: space-between;
+        margin: 0px 10px;
+    }
+
+
+    .links {
+        display: none;
+    }
+
+    .logo, .links{
+        margin: 0 20px;
+    }
+    /* Navbar ends here */
+
+
+    /* Home start here */
+    .content h1{
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        padding-top: 30px;
+        font-size: 1.3rem;
+    }
+    /* Home ends here */
+
+    /* About start here */
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .about-content p {
+        margin-top: 30px;
+        letter-spacing: 0.5px;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        word-spacing: 0.5px;
+    }
+
+    .works {
+        position: relative;
+        background-color: grey;
+        width: inherit;
+    }
+
+
+    .about {
+        padding-top: 40px;
+    }
+
+    .about-content h2::after {
+        position: absolute;
+        top: 5rem;
+        transform: translateX(-100px);
+        border-radius: 30px;
+    }
+    /* About end here */
+
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+    .icons {
+        display: none;
+    }
+
+    a {
+        font-family:'roboto';
+        font-size: .8rem;
+        font-weight: 350;
+        letter-spacing: 0.1rem;
+        padding: 0px 2px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    a {
+        color: black;
+        font-family:'roboto';
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        padding: 0px 5px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
